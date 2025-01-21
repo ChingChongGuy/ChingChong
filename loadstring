@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ChingChongGuy/ChingChong/refs/heads/main/Scripts/Ficsh.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ChingChongGuy/ChingChong/refs/heads/main/Initialize"))()
