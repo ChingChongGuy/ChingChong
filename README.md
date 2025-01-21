@@ -1,7 +1,7 @@
 # 🍜 Ching Chong
 guys trust me
 
-## Welcome to Ching Chong v3.0 Repository! 
+## Welcome to Ching Chong Repository! 
 Hello guys my name is Ching Chong
 
 ```lua
