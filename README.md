@@ -9,4 +9,4 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ChingChongGuy/ChingCh
 Use Any Executor, I use a shitty executor that doesn't support hook functions
 
 ## Games Supported
-- ficsh
+- ficsh [WIP]
