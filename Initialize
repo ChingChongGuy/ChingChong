@@ -9,12 +9,9 @@ end
 local ChingChong = Instance.new("ScreenGui")
 local Icon = Instance.new("ImageLabel")
 local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
-local Label = Instance.new("TextLabel")
-local Label_2 = Instance.new("TextLabel")
-local Label_3 = Instance.new("TextLabel")
 
 ChingChong.Name = "ChingChong"
-ChingChong.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ChingChong.Parent = Gui
 ChingChong.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Icon.Name = "Icon"
@@ -26,76 +23,26 @@ Icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Icon.BorderSizePixel = 0
 Icon.Position = UDim2.new(0.5, 0, 0.5, 0)
 Icon.Size = UDim2.new(0, 0, 0, 0)
-Icon.Image = "rbxassetid://115349082917950"
+Icon.Image = "rbxassetid://91539613788151"
 
 UIAspectRatioConstraint.Parent = Icon
 
-Label.Name = "Label"
-Label.Parent = Icon
-Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Label.BackgroundTransparency = 1.000
-Label.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Label.BorderSizePixel = 0
-Label.Position = UDim2.new(0, 0, 0.998754144, 0)
-Label.Size = UDim2.new(1, 0, 0.10714291, 0)
-Label.Font = Enum.Font.FredokaOne
-Label.Text = "Ching Chong 69"
-Label.TextColor3 = Color3.fromRGB(255, 0, 0)
-Label.TextScaled = true
-Label.TextSize = 14.000
-Label.TextWrapped = true
-
-Label_2.Name = "Label"
-Label_2.Parent = Icon
-Label_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Label_2.BackgroundTransparency = 1.000
-Label_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Label_2.BorderSizePixel = 0
-Label_2.Position = UDim2.new(0, 0, 1.10465109, 0)
-Label_2.Size = UDim2.new(1, 0, 0.057309024, 0)
-Label_2.Font = Enum.Font.FredokaOne
-Label_2.Text = "By ChingCGuy6969"
-Label_2.TextColor3 = Color3.fromRGB(255, 0, 0)
-Label_2.TextScaled = true
-Label_2.TextSize = 14.000
-Label_2.TextWrapped = true
-
-Label_3.Name = "Label"
-Label_3.Parent = Icon
-Label_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Label_3.BackgroundTransparency = 1.000
-Label_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Label_3.BorderSizePixel = 0
-Label_3.Position = UDim2.new(0, 0, 1.18563116, 0)
-Label_3.Size = UDim2.new(1, 0, 0.0946844444, 0)
-Label_3.Font = Enum.Font.FredokaOne
-Label_3.Text = "Ficsh"
-Label_3.TextColor3 = Color3.fromRGB(255, 0, 0)
-Label_3.TextScaled = true
-Label_3.TextSize = 14.000
-Label_3.TextWrapped = true
-
 local ts = game:GetService("TweenService")
-ts:Create(Icon, TweenInfo.new(2), {Size = UDim2.new(0.400000006, 0, 0.400000006, 0)}):Play()
+ts:Create(Icon, TweenInfo.new(2), {Size = UDim2.new(0.3, 0, 0.3, 0)}):Play()
 
 if game.PlaceId == 16732694052 then
 	print("ficsh")
-	Label_3.Text = "Fisch"
 	
 	task.spawn(function()
 		task.wait(5)
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/ChingChongGuy/ChingChong/refs/heads/main/Scripts/Ficsh.txt"))()
 	end)
 else
-	Label_3.Text = "Unsupported Game :("
+	print("unsported game")
 end
 
 task.wait(3)
 ts:Create(Icon, TweenInfo.new(2), {ImageTransparency = 1}):Play()
-
-ts:Create(Label, TweenInfo.new(2), {TextTransparency = 1}):Play()
-ts:Create(Label_2, TweenInfo.new(2), {TextTransparency = 1}):Play()
-ts:Create(Label_3, TweenInfo.new(2), {TextTransparency = 1}):Play()
 task.wait(2)
 
 ChingChong:Destroy()
