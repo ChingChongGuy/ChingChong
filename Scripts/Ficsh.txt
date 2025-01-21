@@ -1,1 +1,44 @@
-print("ficsh")
+local Finity = loadstring(game:HttpGet"https://raw.githubusercontent.com/ChingChongGuy/ChingChong/refs/heads/main/UILibrary")()
+local FinityWindow = Finity.new(true, "Ching Chong | Ficsh", false)
+FinityWindow.ChangeToggleKey(Enum.KeyCode.Semicolon)
+
+local player = game:GetService("Players").LocalPlayer
+
+local function run(code)
+	code()
+end
+
+run(function()
+	local Category = FinityWindow:Category("Auto Farm")
+
+	run(function()
+		local Sector = Category:Sector("Auto Farm")
+
+	end)
+end)
+
+run(function()
+	local Category = FinityWindow:Category("Visuals")
+
+	run(function()
+		local Sector = Category:Sector("")
+		
+	end)
+end)
+
+run(function()
+	local Category = FinityWindow:Category("Settings")
+	
+	run(function()
+		local Sector = Category:Sector("Dev")
+
+		if player.UserId == 7897954241 then
+			Sector:Cheat("Button", "Dex", function()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/ChingChongGuy/ChingChong/refs/heads/main/Dex"))()
+			end)
+			Sector:Cheat("Button", "Destroy UI", function()
+				FinityWindow.userinterface:Destroy()
+			end)
+		end
+	end)
+end)
