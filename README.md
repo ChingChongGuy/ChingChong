@@ -1,5 +1,5 @@
 # 🍜 Ching Chong
-## Worst Ficsh Script
+guys trust me
 
 ## Welcome to Ching Chong v3.0 Repository! 
 Hello guys my name is Ching Chong
