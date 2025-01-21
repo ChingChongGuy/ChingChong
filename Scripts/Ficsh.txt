@@ -1,5 +1,14 @@
-local Finity = loadstring(game:HttpGet"https://raw.githubusercontent.com/ChingChongGuy/ChingChong/refs/heads/main/UILibrary")()
+print("init")
+local Finity = require(script.UiLib) --loadstring(game:HttpGet"https://raw.githubusercontent.com/ChingChongGuy/ChingChong/refs/heads/main/UILibrary")()
 local FinityWindow = Finity.new(true, "Ching Chong | Ficsh", false)
+FinityWindow.container.Topbar.TopbarTip.Font = Enum.Font.MontserratBold
+
+print("create")
+
+local ts = game:GetService("TweenService")
+
+ts:Create(FinityWindow.container, TweenInfo.new(1, Enum.EasingStyle.Back), {Position = UDim2.new(0.5,0,0.5,0)}):Play()
+
 FinityWindow.ChangeToggleKey(Enum.KeyCode.Semicolon)
 
 local player = game:GetService("Players").LocalPlayer
@@ -13,16 +22,77 @@ run(function()
 
 	run(function()
 		local Sector = Category:Sector("Auto Farm")
-
+		
+		Sector:Cheat(
+			"Checkbox", -- Type
+			"AutoFarm", -- Name
+			function(State) -- Callback function
+				
+			end
+		)
+		
+		Sector:Cheat("Slider", "Shake Speed", function(Value)
+		end, {min = 1, max = 100, suffix = " speed"})
+		Sector:Cheat("Label", "")
 	end)
 end)
 
 run(function()
-	local Category = FinityWindow:Category("Visuals")
+	local Category = FinityWindow:Category("Character")
 
 	run(function()
-		local Sector = Category:Sector("")
+		local Sector = Category:Sector("WalkSpeed")
 		
+		local speed = 0
+		
+		Sector:Cheat("Slider", "Speed", function(Value)
+			speed = Value
+		end, {min = 1, max = 100, suffix = " WalkSpeed"})
+		Sector:Cheat("Label", "Default Walkspeed is 16")
+
+		Sector:Cheat("Button", "Run", function()
+			
+		end)
+	end)
+
+	run(function()
+		local Sector = Category:Sector("JumpPower")
+
+		local jumpPower = 0
+
+		Sector:Cheat("Slider", "JumpPower", function(Value)
+			jumpPower = Value
+		end, {min = 1, max = 100, suffix = " JumpPower"})
+		Sector:Cheat("Label", "Default JumpPower is 50")
+
+		Sector:Cheat("Button", "Run", function()
+
+		end)
+	end)
+
+	run(function()
+		local Sector = Category:Sector("Teleport")
+		
+		Sector:Cheat("Dropdown", "Location", function(Option)
+			print("Dropdown option changed:", Option)
+		end, {
+			options = {
+				"Moosewood",
+				"Terrapin Island",
+				"Sunstone Island",
+				"Roslit Bay",
+				"Vertigo",
+				"Statue Of Sovereignty",
+				"Mushgrove Swamp",
+				"Snowcap Island",
+				"The Arch",
+				"Keeper Alter",
+			}
+		})
+
+		Sector:Cheat("Button", "Teleport", function()
+
+		end)
 	end)
 end)
 
