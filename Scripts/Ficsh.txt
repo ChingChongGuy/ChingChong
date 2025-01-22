@@ -1,7 +1,6 @@
 print("init")
-local Finity = require(script.UiLib) --loadstring(game:HttpGet"https://raw.githubusercontent.com/ChingChongGuy/ChingChong/refs/heads/main/UILibrary")()
+local Finity = loadstring(game:HttpGet"https://raw.githubusercontent.com/ChingChongGuy/ChingChong/refs/heads/main/UILibrary")()
 local FinityWindow = Finity.new(true, "Ching Chong | Ficsh", false)
-FinityWindow.container.Topbar.TopbarTip.Font = Enum.Font.MontserratBold
 
 print("create")
 
