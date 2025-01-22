@@ -1469,6 +1469,10 @@ function finity.new(isdark, gprojectName, thinProject)
 				cheat.label.Parent = cheat.frame
 				cheat.container.Parent = cheat.frame
 
+				function cheat.SetTitle(text)
+					cheat.label.Text = text
+				end
+
 				return cheat
 			end
 
